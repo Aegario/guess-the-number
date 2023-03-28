@@ -22,10 +22,6 @@ export const Controls: FC<Props> = () => {
           />
         </div>
       </div>
-
-      <div>Button</div>
-      <div>RoundStatisticsTable</div>
-      <div>SpeedSlider</div>
     </div>
   )
 }
