@@ -1,13 +1,9 @@
-import { useState } from 'react'
+import React, { FC } from 'react'
+import { Container } from 'layout'
+import { GameBoard } from 'features'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <h1 className="text-3xl font-bold">
-      Hello world!
-    </h1>
-  )
-}
-
-export default App
+export const App: FC = () => (
+  <Container>
+    <GameBoard />
+  </Container>
+)
