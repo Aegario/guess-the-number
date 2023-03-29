@@ -1,3 +1,7 @@
-export { Badge } from './Badge/Badge'
 export { ManualNumberInput } from './ManualNumberInput/ManualNumberInput'
+export { Badge } from './Badge/Badge'
+export { Title } from './Title/Title'
 export { Button } from './Button/Button'
+export { Table } from './Table/Table'
+export { Head } from './Table/Head'
+export { Row } from './Table/Row'

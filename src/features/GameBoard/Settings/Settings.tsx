@@ -10,14 +10,19 @@ export const Settings: FC<Props> = () => {
   const handleStartClick = () => {
     console.log('Started')
   }
+
   return (
     <>
       <Controls />
       <div className="mt-4">
         <Button onClick={handleStartClick}>Start</Button>
       </div>
-      <RoundStatisticsTable />
-      <SpeedSlider />
+      <div className="mt-6">
+        <RoundStatisticsTable />
+      </div>
+      <div className="mt-6">
+        <SpeedSlider />
+      </div>
     </>
   )
 }
