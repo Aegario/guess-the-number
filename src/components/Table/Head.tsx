@@ -8,7 +8,7 @@ export const Head: FC<Props> = ({ items }) => {
   return (
     <tr className="h-4 text-xs">
       {items.map(item => (
-        <th className="py-0.5">{item}</th>
+        <th className="py-0.5 text-slate-400">{item}</th>
       ))}
     </tr>
   )

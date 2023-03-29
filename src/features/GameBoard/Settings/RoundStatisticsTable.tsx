@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react'
-import { Head, Row, Table } from 'components'
+import { Head, Row, Table, Title } from 'components'
 import { CURRENT_ROUND } from 'mock'
 import { TrophyIcon } from 'icons'
 
@@ -15,23 +15,26 @@ export const RoundStatisticsTable: FC<Props> = () => {
   }, [])
 
   return (
-    <Table
-      title={TABLE_TITLE}
-      icon={<TrophyIcon />}
-      head={<Head items={HEADER_ITEMS} />}
-      body={
-        <>
-          {CURRENT_ROUND.map((entry, i) => {
-            const isYou = i === 0
-            const cellData = [
-              isYou ? 'You' : entry.name,
-              showContent ? entry.points : '-',
-              showContent ? entry.multiplier : '-',
-            ]
-            return <Row key={entry.id} isSpecialRow={isYou} items={cellData} />
-          })}
-        </>
-      }
-    />
+    <>
+      <Title icon={<TrophyIcon />} text={TABLE_TITLE} />
+      <Table
+        head={<Head items={HEADER_ITEMS} />}
+        body={
+          <>
+            {CURRENT_ROUND.map((entry, i) => {
+              const isYou = i === 0
+              const cellData = [
+                isYou ? 'You' : entry.name,
+                showContent ? entry.points : '-',
+                showContent ? entry.multiplier : '-',
+              ]
+              return (
+                <Row key={entry.id} isSpecialRow={isYou} items={cellData} />
+              )
+            })}
+          </>
+        }
+      />
+    </>
   )
 }
