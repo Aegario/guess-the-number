@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import { Badge } from 'components'
 import { RibbonIcon, PersonIcon, ClockIcon } from 'icons'
 import { useTime } from 'hooks'
+import { Badge } from './Badge'
 
 interface Props {}
 
-export const AdditionalInfo: FC<Props> = () => {
+export const UserInfo: FC<Props> = () => {
   const currentTime = useTime()
   return (
     <div className="flex justify-between">

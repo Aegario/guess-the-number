@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { ManualNumberInput } from 'components/ManualNumberInput/ManualNumberInput'
+import { ManualNumberInput } from './ManualNumberInput'
 
 interface Props {}
 

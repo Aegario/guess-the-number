@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import { Chart } from './Chart'
-import { AdditionalInfo } from './AdditionalInfo'
+import { UserInfo } from './UserInfo'
 
 interface Props {}
 
 export const View: FC<Props> = () => {
   return (
     <>
-      <AdditionalInfo />
+      <UserInfo />
       <Chart />
     </>
   )
