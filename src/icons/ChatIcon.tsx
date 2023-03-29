@@ -3,7 +3,7 @@ import { FC } from 'react'
 interface Props {}
 
 export const ChatIcon: FC<Props> = () => (
-  <svg height="24px" width="24px" version="1.1" viewBox="0 0 60 60">
+  <svg height="20px" width="20px" version="1.1" viewBox="0 0 60 60">
     <g>
       <path
         fill="#FF7676"

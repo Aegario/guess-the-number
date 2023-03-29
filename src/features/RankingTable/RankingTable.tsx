@@ -16,7 +16,7 @@ export const RankingTable: FC<Props> = () => {
   }, [])
 
   return (
-    <div>
+    <>
       <Title icon={<RankingIcon />} text={TABLE_HEADER} />
       <Table
         head={<Head items={HEADER_ITEMS} />}
@@ -34,6 +34,6 @@ export const RankingTable: FC<Props> = () => {
           </>
         }
       />
-    </div>
+    </>
   )
 }

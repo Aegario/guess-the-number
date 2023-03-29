@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Container } from 'layout'
-import { GameBoard, Settings, RankingTable } from 'features'
+import { GameBoard, Settings, RankingTable, Chat } from 'features'
 
 export const App: FC = () => (
   <Container>
@@ -14,10 +14,12 @@ export const App: FC = () => (
     </div>
 
     <div className="mt-6 flex">
-      <div className="h-[180px] w-[54%]">
+      <div className="w-[54%]">
         <RankingTable />
       </div>
-      <div className="border-def ml-4 h-[280px] w-[46%]"></div>
+      <div className="ml-4 w-[46%]">
+        <Chat />
+      </div>
     </div>
   </Container>
 )
