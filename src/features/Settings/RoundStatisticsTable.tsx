@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 import { Head, Row, Table, Title } from 'components'
-import { CURRENT_ROUND } from 'mock'
+import { ROUND_ENTRIES } from 'mock'
 import { TrophyIcon } from 'icons'
 
 const TABLE_TITLE = 'Current Round'
@@ -21,16 +21,14 @@ export const RoundStatisticsTable: FC<Props> = () => {
         head={<Head items={HEADER_ITEMS} />}
         body={
           <>
-            {CURRENT_ROUND.map((entry, i) => {
+            {ROUND_ENTRIES.map((entry, i) => {
               const isYou = i === 0
-              const cellData = [
+              const cells = [
                 isYou ? 'You' : entry.name,
                 showContent ? entry.points : '-',
                 showContent ? entry.multiplier : '-',
               ]
-              return (
-                <Row key={entry.id} isSpecialRow={isYou} items={cellData} />
-              )
+              return <Row key={entry.id} isSpecialRow={isYou} items={cells} />
             })}
           </>
         }

@@ -7,8 +7,8 @@ interface Props {
 
 export const Badge: FC<Props> = ({ icon, value }) => (
   <div
-    className="gradient relative flex h-[3.125rem] w-full min-w-[188px]
-      items-center justify-center rounded-lg border-2 border-gray-700"
+    className="gradient border-def relative flex h-[3.125rem] w-full
+      min-w-[188px] items-center justify-center"
   >
     <div className="absolute top-0 left-0 ml-3 flex h-full items-center">
       {icon}

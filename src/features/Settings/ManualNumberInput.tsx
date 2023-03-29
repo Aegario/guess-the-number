@@ -44,10 +44,7 @@ export const ManualNumberInput: FC<Props> = ({
   }
 
   return (
-    <div
-      className="gradient h-[3.125rem] min-w-[188px] grow rounded-lg
-      border-2 border-gray-700 px-2"
-    >
+    <div className="gradient border-def h-[3.125rem] min-w-[188px] grow px-2">
       <p className="text-center text-xs text-slate-400">{label}</p>
       <div className="flex items-center justify-center">
         <ArrowButton onClick={handleDecrement} type={ButtonType.Decrease} />

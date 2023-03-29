@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-export const TrophyIcon = () => (
+export const TrophyIcon: FC = () => (
   <svg viewBox="0 0 1024 1024" width="20px" height="20px" version="1.1">
     <path d="M448.8 622.8h126.5v126.5H448.8z" fill="#FFB300" />
     <path

@@ -1,1 +1,1 @@
-export { CURRENT_ROUND } from './currentRound'
+export { ROUND_ENTRIES } from './roundEntries'

@@ -19,10 +19,7 @@ export const SpeedSlider: FC<Props> = () => {
   return (
     <>
       <Title text={TITLE} icon={<SpeedIcon />} />
-      <div
-        className="flex h-16 flex-col items-center justify-end rounded-lg
-        border-2 border-gray-700 bg-gray-800 px-4"
-      >
+      <div className="border-def flex h-16 flex-col items-center justify-end bg-gray-800 px-4">
         <input
           type="range"
           onChange={handleChange}
@@ -39,6 +36,7 @@ export const SpeedSlider: FC<Props> = () => {
             const isActive = rangeValue >= rangeItem
             return (
               <span
+                key={rangeItem}
                 className={classNames('font-semibold', {
                   'text-pink-600': isActive,
                 })}

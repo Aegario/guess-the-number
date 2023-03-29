@@ -3,5 +3,5 @@ import { FC } from 'react'
 interface Props {}
 
 export const Chart: FC<Props> = () => {
-  return <div>Chart</div>
+  return <div className="border-def mt-4 h-[524px] bg-gray-800"></div>
 }

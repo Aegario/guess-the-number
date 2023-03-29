@@ -1,13 +1,11 @@
 import { FC } from 'react'
 
-interface Props {}
-
-export const SpeedIcon: FC<Props> = () => (
+export const SpeedIcon: FC = () => (
   <svg
     version="1.1"
     width="24px"
     height="24px"
-    viewBox="0 0 512 512"
+    viewBox="0 0 512 384"
     enable-background="new 0 0 512 512"
   >
     <g>
