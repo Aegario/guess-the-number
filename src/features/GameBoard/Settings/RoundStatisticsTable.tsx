@@ -1,30 +1,34 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Head, Row, Table } from 'components'
 import { CURRENT_ROUND } from 'mock'
 import { TrophyIcon } from 'icons'
 
-interface Props {}
+const TABLE_TITLE = 'Current Round'
+const HEADER_ITEMS = ['Name', 'Bet', 'Multiplier']
 
+interface Props {}
 export const RoundStatisticsTable: FC<Props> = () => {
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => setShowContent(true), 1000)
+  }, [])
+
   return (
     <Table
-      title="Current Round"
+      title={TABLE_TITLE}
       icon={<TrophyIcon />}
-      head={<Head items={['Name', 'Bet', 'Multiplier']} />}
+      head={<Head items={HEADER_ITEMS} />}
       body={
         <>
           {CURRENT_ROUND.map((entry, i) => {
             const isYou = i === 0
-            return (
-              <Row
-                isSpecialRow={isYou}
-                items={[
-                  isYou ? 'You' : entry.name,
-                  entry.points,
-                  entry.multiplier,
-                ]}
-              />
-            )
+            const cellData = [
+              isYou ? 'You' : entry.name,
+              showContent ? entry.points : '-',
+              showContent ? entry.multiplier : '-',
+            ]
+            return <Row key={entry.id} isSpecialRow={isYou} items={cellData} />
           })}
         </>
       }

@@ -1,4 +1,7 @@
+import { v4 } from 'uuid'
+
 export class RoundEntry {
+  id = v4()
   name: string
   points: number
   multiplier: number
