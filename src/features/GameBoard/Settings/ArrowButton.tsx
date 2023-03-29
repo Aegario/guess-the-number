@@ -13,7 +13,7 @@ interface Props {
 export const ArrowButton: FC<Props> = ({ onClick, type }) => {
   return (
     <button
-      className="flex h-[26px]  max-w-[26px] flex-grow items-center
+      className="flex h-[26px]  w-[26px] flex-grow items-center
       justify-center rounded-lg border-2 border-slate-600"
       onClick={onClick}
     >
