@@ -4,7 +4,7 @@ import { ROUND_ENTRIES } from 'mock'
 import { TrophyIcon } from 'icons'
 
 const TABLE_TITLE = 'Current Round'
-const HEADER_ITEMS = ['Name', 'Bet', 'Multiplier']
+const HEADER_ITEMS = ['Name', 'Points', 'Multiplier']
 
 interface Props {}
 export const RoundStatisticsTable: FC<Props> = () => {
